@@ -15,6 +15,16 @@ http://www.steamcommunity.com/id/vexan
 
 --sooper dooper underwater funkshinz
 
+--**********
+--USE
+--**********
+--Tells the server if the player is underwater.
+
+--**********
+--NOTES
+--**********
+--Place the Lua file in lua/autorun/server to get it working.
+--The script is relatively useless, so I don't plan on changing it much.
 
 MsgC( Color( 255, 255, 255 ), "VeXan's Underwater Sensor: ", Color( 255, 0, 0 ), "0% Loaded\n" ) --0% loaded message.
 
