@@ -1,3 +1,3 @@
 # Lua-Scripts
 
-Ignore this readme for now
+These are a bunch of random Lua files that may or may not help players/server owners. Message me if you want anything changed.
