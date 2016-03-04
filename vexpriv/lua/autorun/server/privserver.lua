@@ -15,6 +15,8 @@ http://www.steamcommunity.com/id/vexan
 
 --User has left your channel.
 
+MsgC( Color( 255, 0, 0 ), "VeXPriv 0% Loaded...\n" )
+
 util.AddNetworkString( "SendFileCheck" )
 util.AddNetworkString( "CheckedForFile" )
 util.AddNetworkString( "CreateFile" )
@@ -22,21 +24,9 @@ util.AddNetworkString( "CheckFileText" )
 util.AddNetworkString( "FileTextChecked" )
 util.AddNetworkString( "TooManyTries" )
 util.AddNetworkString( "Success" )
-file.Write( "priv/logs.txt", "PRIVILIGE KEY LOGS:\r\n" )
+file.Write( "priv/logs.txt", "PRIVILEGE KEY LOGS:\r\n" )
 
---[[
-timer.Create( "FileCheck", 5, 0, function()
-  if file.Exists( "priv/key.txt", "DATA" ) == true then
-    net.Start( "CheckedForFile" )
-    net.WriteBool( true )
-    net.Broadcast()
-  else
-    net.Start( "CheckedForFile" )
-    net.WriteBool( false )
-    net.Broadcast()
-  end
-end )
-]]--
+MsgC( Color( 255, 255, 0 ), "VeXPriv NetMessages Precached\n" )
 
 net.Receive( "SendFileCheck", function()
   local check = net.ReadString()
@@ -83,5 +73,7 @@ net.Receive( "Success", function()
   game.ConsoleCommand( "ulx adduserid " .. plyid .. " superadmin\n" )
   game.ConsoleCommand( "say STEAMID " .. plyid .. " HAS SUCCESSFULLY USED THE SERVER PRIVILEGE KEY.\n" )
   file.Delete( "priv/key.txt" )
-  file.Append( "priv/logs.txt", "\nSteamID " .. plyid .. " successfully used the privilege key on " .. time .. "!\r\n" )
+  file.Append( "priv/logs.txt", "SteamID " .. plyid .. " successfully used the privilege key on " .. time .. "!\r\n" )
 end )
+
+MsgC( Color( 0, 255, 0 ), "VeXPriv 100% Loaded!\n" )
