@@ -25,7 +25,7 @@ else
 	ply:SetNWBool( "BHOP_EN", false )
 end
 
-hook.Add( "CreateMove", "vx_authop", function(ucmd)
+hook.Add( "CreateMove", "vx_authop", function( ucmd )
 	if !bhop:GetBool() then return end
 
 	if ucmd:KeyDown( IN_JUMP ) and IsValid( LocalPlayer() ) and LocalPlayer():GetMoveType() != MOVETYPE_NOCLIP and LocalPlayer():Alive() and ply:WaterLevel() == 0 then
