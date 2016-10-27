@@ -13,7 +13,7 @@
 http://www.steamcommunity.com/id/vexan
 ]]--
 
-CreateClientConVar( "vx_autohop", 0, true, false, "Enables/Disables the HS Autohop." )
+CreateClientConVar( "vx_autohop", 0, true, false, "Enables/Disables autohop." )
 
 local bhop = GetConVar( "vx_autohop" )
 local ply = LocalPlayer()
